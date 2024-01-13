@@ -1,0 +1,23 @@
+[package]
+name = "fix"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2.151"
+lib = {path = "../lib"}
+
+
+[[bin]]
+name = "fix_server"
+path = "src/fix_server_main.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "fix_client"
+path = "src/fix_client_main.rs"
+test = false
+bench = false

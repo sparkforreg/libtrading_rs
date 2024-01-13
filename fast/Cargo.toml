@@ -1,0 +1,25 @@
+[package]
+name = "fast"
+version = "0.1.0"
+edition = "2021"
+build = "src/build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2.151"
+lib = {path = "../lib"}
+glib = "0.18.5"
+libxml = "0.3.3"
+
+[[bin]]
+name = "fast_client"
+path = "src/fast_client_main.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "fast_server"
+path = "src/fast_server_main.rs"
+test = false
+bench = false
